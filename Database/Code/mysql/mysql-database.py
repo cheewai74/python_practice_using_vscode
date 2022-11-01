@@ -11,7 +11,7 @@ def connect(dbname):
     except Error as e:
         print(e)
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     db = connect("projects")
     cursor = db.cursor()
     cursor.execute("SELECT * FROM projects")

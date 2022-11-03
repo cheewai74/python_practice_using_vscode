@@ -18,3 +18,5 @@ INSERT INTO tasks(description, project_id) VALUES("Read The Huntress", 2);
 
 SELECT * FROM tasks;
 SELECT * FROM projects;
+
+CREATE DATABASE household;

@@ -11,3 +11,14 @@ activate
 pip install mysql-connector-python
 
 Copy mysql-database.py to mysql-workspace folder
+At virtual environment, python mysql-database.py
+
+// -----------------------------------------------------------//
+
+create mysql-sqlalchemy-workspace folder
+python -m venv C:\work\mysql-sqlalchemy-workspace
+
+cd C:\work\mysql-sqlalchemy-workspace
+
+pip install mysql-connector-python
+pip install SQLAlchemy 

@@ -1,3 +1,10 @@
+# 
+# 1. Create a folder C:\work\mysql-csv-workspace
+# 2. python -m venv C:\work\mysql-csv-workspace
+# 3. Copy python file to C:\work\mysql-csv-works
+# 4. Copy salespeople.csv to C:\work\mysql-csv-workspace
+#
+
 import mysql.connector as mysql
 import csv
 

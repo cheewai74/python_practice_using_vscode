@@ -1,3 +1,9 @@
+# 
+# 1. Create a folder C:\work\mysql-workspace
+# 2. python -m venv C:\work\mysql-workspace
+# 3. Copy python file to C:\work\mysql-workspace
+#
+
 import mysql.connector as mysql
 
 def connect(dbname):

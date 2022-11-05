@@ -1,3 +1,9 @@
+# 
+# 1. Create a folder C:\work\mysql-sqlalchemy-workspace
+# 2. python -m venv C:\work\mysql-sqlalchemy-workspace
+# 3. Copy python file to C:\work\mysql-sqlalchemy-workspace
+#
+
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, relationship

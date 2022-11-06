@@ -4,8 +4,7 @@
 # 3. Copy python file to C:\work\postgres-workspace
 #
 # pip install:
-# pip install psycopg2
-# pip install psycopg2-binary
+# pip install psycopg2-binary (Note: only works on Python 3.6)
 #
 # Execute:
 # deactivate python virtual environment

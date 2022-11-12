@@ -15,3 +15,5 @@ C:\work\postgres-workspace
 
 <!-- Enter postgres  -->
 \copy sales FROM 'C:\work\postgres-workspace\red30-postgres.csv' WITH DELIMITER ',' CSV HEADER;
+
+pip install SQLAlchemy 

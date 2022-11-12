@@ -24,6 +24,10 @@ with engine.connect() as connection:
     result_set = connection.execute(select_statement)
     for r in result_set:
         print(r)
+        
+    # Delete
+    # delete_statement = sales_table.delete().where(sales_table.c.order_num==1105910)
+    # connection.execute(delete_statement)
 
     # Update
     update_statement = sales_table.update().where(sales_table.c.order_num==1105910).values(quantity=2, order_total=39)

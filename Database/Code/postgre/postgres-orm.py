@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('postgres://postgres:password@localhost/red30')
+engine = create_engine('postgresql://postgres:password@localhost/red30')
 Base = declarative_base(engine)
 Base.metadata.reflect(engine)
 
@@ -23,6 +23,11 @@ def loadSession():
 
 if __name__ == "__main__":
     session = loadSession()
+    
+     # Delete
+    # returned_sale = session.query(Sales).filter(Sales.order_num == 1105910).first()
+    # session.delete(returned_sale)
+    # session.commit()
 
     # Read
     smallest_sales = session.query(Sales).order_by(Sales.order_total).limit(10)

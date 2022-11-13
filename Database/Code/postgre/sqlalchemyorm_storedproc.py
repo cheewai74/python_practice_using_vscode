@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, func
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-engine = create_engine('postgres://postgres:password@localhost/red30')
+engine = create_engine('postgresql://postgres:password@localhost/red30')
 #isolation_level="AUTOCOMMIT"
 
 Base = declarative_base(engine)

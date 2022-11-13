@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy import Table, MetaData
 
-engine = create_engine('postgres://postgres:password@localhost/red30',
+engine = create_engine('postgresql://postgres:password@localhost/red30',
 	isolation_level="AUTOCOMMIT")
 
 with engine.connect() as connection:

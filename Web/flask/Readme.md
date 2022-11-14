@@ -1,7 +1,7 @@
 1. create a folder project-tracker-workspace
 2. python -m venv project-tracker-workspace
 3. mkdir templates
-4. create a index.html
+4. create a index.html, project-tasks.html
 
 PIP Install:
 pip install SQLAlchemy 

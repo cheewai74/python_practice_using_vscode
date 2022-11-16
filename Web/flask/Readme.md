@@ -7,3 +7,11 @@ PIP Install:
 pip install SQLAlchemy 
 pip install Flask
 pip install psycopg2-binary 
+pip install flask-sqlalchemy
+
+psql -U postgres
+CREATE DATABASE project_tracker;
+\l
+\q
+
+\dt

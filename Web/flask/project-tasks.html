@@ -4,14 +4,19 @@
     <title>Project-tasks</title>
 </head>
 <body>
-    <h1>Project {{project_id}}</h1>
+    <!--h1>Project {{project_id}}</h1-->
+    <h1>Project {{project.title}}</h1>
     <ul>
-        <li>Task 1</li>
+        {% for task in tasks %}
+            <li>{{task.description}}</li>
+        {% endfor %}
+        <!--li>Task 1</li>
         <li>Task 2</li>
-        <li>Task 3</li>
+        <li>Task 3</li-->
     </ul>
     <h3>Add New Task</h3>
-    <form action="/add/task/{{project_id}}" method="POST">
+    <!--form action="/add/task/{{project_id}}" method="POST"-->
+    <form action="/add/task/{{project.project_id}}" method="POST"></form>
         <div>
             Task: <input type="text" name="task-description">
         </div>

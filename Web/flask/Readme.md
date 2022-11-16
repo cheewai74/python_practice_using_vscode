@@ -15,3 +15,8 @@ CREATE DATABASE project_tracker;
 \q
 
 \dt
+
+
+python shell
+import os
+os.urandom(24)

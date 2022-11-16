@@ -1,30 +1,26 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>project-tracker-workspace</title>
-</head>
-<body>
-    <h1>Projects</h1>
-    <ul>
-        {% for project in projects %}
-        <li><a href="/project/{{project.project_id}}">{{project.title}}</a></li>
-        <!--li><a href="/project/1">Project 1</a></li>
-        <li><a href="/project/2">Project 2</a></li>
-        <li><a href="/project/3">Project 3</a></li-->
-        {%endfor%}
-    </ul>
-    <br>
-    <h3>Add new project</h3>
-    <form action="/add/project" method="POST">
-        <div>
-            Project Name: <input type="text" name="project-title">
-        </div>
-        <br>
-        <input type="submit" value="Add Project">
-    </form>
+<html>
+	<body>
+		<h1>Projects</h1>
 
-    {% for category, message in get_flashed_messages(with_categories=true) %}
+		<ul>
+			{% for project in projects %}
+			<li><a href="/project/{{ project.project_id }}">{{ project.title }}</a></li>
+			{% endfor %}
+		</ul>
+
+		<br>
+
+		<h3>Add new project</h3>
+		<form action="/add/project" method="POST">
+			<div>
+			Project Name: <input type="text" name="project-title">
+			</div>
+			<br>
+			<input type="submit" value="Add Project">
+		</form>
+
+		{% for category, message in get_flashed_messages(with_categories=true) %}
 			<div style="color: {{ category }}">{{ message }}</div>
 		{% endfor %}
-</body>
+	</body>
 </html>

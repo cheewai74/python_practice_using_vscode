@@ -21,3 +21,4 @@ django-admin startproject Django_hello_world
 
  python manage.py runserver
  python manage.py startapp my_app
+ python manage.py migrate

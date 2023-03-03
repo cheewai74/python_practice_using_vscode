@@ -21,4 +21,12 @@ django-admin startproject Django_hello_world
 
  python manage.py runserver
  python manage.py startapp my_app
+
  python manage.py migrate
+ python manage.py createsuperuser
+ username and password: admin12345, admin12345
+
+ python manage.py  makemigrations
+ python manage.py migrate
+
+ python manage.py shell

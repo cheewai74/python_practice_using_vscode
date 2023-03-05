@@ -8,6 +8,7 @@ cd C:\work\django_ve
 activate
 
 pip install Django
+pip install pillow (For Django to work with images)
 
 CTRL SHIFT P
 Python Interpreter

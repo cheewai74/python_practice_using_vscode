@@ -14,3 +14,21 @@
 8. Create a view method in #app_name/views.py
    def nick(request):
       return render(request, 'jobs/nick.html')
+9. Referred to Optional steps, Database
+10. python manage.py makemigrations
+11. python manage.py migrate
+12. Create an admin account
+    - python manage.py createsuperuser 
+    - E.g: username: nick password: django1234
+13. #app_name folder > admin.py
+    - from .model import #class_name (Referred to #app_name/models.py E.g Job)
+    - admin.site.register(#class_name)
+14. #app_name folder > views.py
+    - from .model import #class_name (Referred to #app_name/models.py E.g Job)
+
+Optional
+
+Database:
+   Note: pip install psycopg2 (For Postgres)
+   #project_name folder > Setting.py 
+   DATABASES = {..}

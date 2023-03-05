@@ -9,6 +9,7 @@ activate
 
 pip install Django
 pip install pillow (For Django to work with images)
+pip install psycopg2 (For Postgres)
 
 CTRL SHIFT P
 Python Interpreter

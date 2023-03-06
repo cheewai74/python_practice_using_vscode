@@ -7,6 +7,10 @@ python.exe -m pip install --upgrade pip
 cd C:\work\django_ve
 activate
 
+HTML & CSS:
+https://getbootstrap.com
+
+PIP Install:
 pip install Django
 pip install pillow (For Django to work with images)
 pip install psycopg2 (For Postgres)

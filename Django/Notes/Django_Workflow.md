@@ -36,6 +36,8 @@
 18. python manage.py collectstatic
 19. home.html
     -  {% load static %} 
+20. Download Bootstrap and JQuery and Popper (https://popper.js.org) and copy   to static folder in /#app_name (jobs/static folder).
+21. python manage.py collectstatic
 
 Optional
 

@@ -25,6 +25,17 @@
     - admin.site.register(#class_name)
 14. #app_name folder > views.py
     - from .model import #class_name (Referred to #app_name/models.py E.g Job)
+15. Create a folder "static" in #app_name folder
+16. #app_name folder > settings.py
+   - look for STATIC_URL = 'static/'
+   E.g: add STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+17. #app_name/urls.py
+    - from django.conf import settings
+    - from django.conf.urls.static import static
+    - urlpatterns = [...] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+18. python manage.py collectstatic
+19. home.html
+    -  {% load static %} 
 
 Optional
 

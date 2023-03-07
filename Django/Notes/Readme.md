@@ -14,6 +14,14 @@ PIP Install:
 pip install Django
 pip install pillow (For Django to work with images)
 pip install psycopg2 (For Postgres)
+pip  freeze > requirements.txt 
+
+git init
+git add -A
+git commit -m "First Commit"
+heroku create
+git push heroku master
+
 
 CTRL SHIFT P
 Python Interpreter

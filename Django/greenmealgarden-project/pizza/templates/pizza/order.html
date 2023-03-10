@@ -1,11 +1,74 @@
-<h1>Order a Pizza</h1>
+{% extends 'pizza/base.html' %}
+{% comment %} <!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <title>Green Meal Garden</title>
+  </head>
+  <body> {% endcomment %}
+
+{% block 'body' %}
+{% load widget_tweaks %}
+    <div class="container">
+
+      <h1>Order a Pizza</h1>
+
+      <h2>{{ note }}</h2>
+          {% if created_pizza_pk %}
+          <h2><a href="{% url 'edit_order' created_pizza_pk %}">Edit Your Order</a></h2>
+          {% endif %}
+
+
+      <form action="{% url 'order' %}" method="post">
+          {% csrf_token %}
+          {% for field in pizzaform %}
+        <div class="form-group {%if field.errors %}alert alert-danger{%endif%}">
+
+
+            {{ field.errors }}
+            {{ field.label_tag }}
+            {% render_field field class="form-control" %}
+
+
+        </div>
+        {% endfor %}
+
+          <input type="submit" value="Order Pizza">
+      </form>
+
+      <br><br>
+      Want more than one pizza?
+      <form action="{% url 'pizzas' %}" method="get">
+        {% csrf_token %}
+        {{ multiple_form }}
+        <input type="submit" value="Get Pizzas">
+      </form>
+
+    </div>
+{% endblock %}
+    {% comment %} <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html> {% endcomment %}
+
+{% comment %} <h1>Order a Pizza</h1>
 <h2>{{ note }}</h2>
 {% if created_pizza_pk %}
 <a href="{% url 'edit_order' created_pizza_pk %}" >Edit your order</a>
-{% endif %}
+{% endif %} {% endcomment %}
 
 {% comment %} <form enctype="multipart/form-data" action="{% url 'order' %}" method="post"> {% endcomment %}
-<form action="{% url 'order' %}" method="post">
+{% comment %} <form action="{% url 'order' %}" method="post" novalidate> {% endcomment %}
+{% comment %} <form action="{% url 'order' %}" method="post" novalidate>
     {% csrf_token %}
     {% comment %} <lable for="topping1">Topping 1: </label>
     <input id="topping1" type="text" name="topping1">
@@ -18,8 +81,26 @@
         <option value="Large">Large</option>
     </select> {% endcomment %}
 
-    {{ pizzaform }}
-    <input type="Submit" value="Order Pizza">
+    {% comment %} {{ pizzaform.as_p }} {% endcomment %}
+
+    {% comment %} <ol>
+        {{ pizzaform.as_ul}}
+    </ol> {% endcomment %}
+
+    {% comment %} {{ pizzaform}} {% endcomment %}
+
+    {% comment %} {{ pizzaform.topping1.label_tag }}
+    {{ pizzaform.topping1 }}
+    {{ pizzaform.topping1.errors }}
+    {{ pizzaform.topping2.label_tag }}
+    {{ pizzaform.topping2 }}
+    {{ pizzaform.topping2.errors }}
+    <br><br><br><br>
+    <label for="{{ pizzaform.size.id_for_label}}">Size:</label>
+    {{ pizzaform.size }}
+    {{ pizzaform.size.errors }} {% endcomment %}
+
+    {% comment %} <input type="Submit" value="Order Pizza">
 </form>
 <br><br>
 
@@ -27,5 +108,5 @@ Want more than one pizza?
 <form action="{% url 'pizzas' %}" method="get">
     {{ multiple_form }}
     <input type="submit" value="Get Pizzas" />
-</form>
+</form> {% endcomment %}
 

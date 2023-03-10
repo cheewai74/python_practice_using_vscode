@@ -14,6 +14,7 @@ PIP Install:
 pip install Django
 pip install pillow (For Django to work with images)
 pip install psycopg2 (For Postgres)
+pip install django-widget-tweaks
 pip  freeze > requirements.txt 
 
 git init

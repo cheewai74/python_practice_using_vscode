@@ -1,2 +1,10 @@
-<h1>Green Meal Garden</h1>
-<a href="{% url 'order' %}">Order a pizza</a>
+{% extends 'pizza/base.html' %}
+{% block 'body' %}
+{% comment %} <h1>Green Meal Garden</h1> {% endcomment %}
+{% comment %} <a href="{% url 'order' %}">Order a pizza</a> {% endcomment %}
+<div class="text-center">
+{% load static %}
+<img src="{% static 'pizza.jiff' %}" class="img-fluid" alt="Green Meal Garden">
+</div>
+{% endblock %}
+

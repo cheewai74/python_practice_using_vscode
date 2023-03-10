@@ -12,6 +12,10 @@ https://getbootstrap.com
 
 PIP Install:
 pip install Django
+
+pip install selenium (TDD)
+pip install webdriver-manager
+
 pip install pillow (For Django to work with images)
 pip install psycopg2 (For Postgres)
 pip install django-widget-tweaks
@@ -22,6 +26,9 @@ git add -A
 git commit -m "First Commit"
 heroku create
 git push heroku master
+
+Selenium:
+copy gecko driver to virtualenv scripts folder
 
 
 CTRL SHIFT P
@@ -45,3 +52,8 @@ django-admin startproject Django_hello_world
  python manage.py migrate
 
  python manage.py shell
+
+ TDD:
+ python manage.py test
+
+ https://passwordsgenerator.net/sha256-hash-generator/

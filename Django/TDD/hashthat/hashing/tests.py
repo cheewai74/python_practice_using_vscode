@@ -4,7 +4,8 @@ from django.test import TestCase
 from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
 from .forms import HashForm
-import hashlib
+from .models import Hash
+import hashlib 
 
 # class FunctionalTestCase(TestCase):
     
@@ -41,5 +42,15 @@ class UnitTestCase(TestCase):
     def test_hash_func_works(self):
         text_hash = hashlib.sha256('hello'.encode('utf-8')).hexdigest()
         self.assertEqual('2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824', text_hash.upper())
+        
+    def test_hash_object(self):
+        hash = Hash()
+        hash.text = 'hello'
+        hash.hash = '2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824'
+        hash.save()
+        pulled_hash = Hash.objects.get(hash='2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824')
+        self.assertEqual(hash.text, pulled_hash.text)
+        
+        
         
         

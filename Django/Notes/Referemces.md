@@ -5,3 +5,5 @@ https://ccbv.co.uk
 djangoproject.com
 
 https://www.codecademy.com/learn/templates-in-django/modules/django-templates/cheatsheet
+
+https://dashboard.stripe.com/test/dashboard

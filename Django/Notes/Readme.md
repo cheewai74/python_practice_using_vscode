@@ -10,13 +10,14 @@ activate
 Impt:
 Any changes to model.py: 
 1. python manage.py makemigrations
-2. python maanage.py migrate
+2. python manage.py migrate
 
 HTML & CSS:
 https://getbootstrap.com
 
 PIP Install:
 pip install Django
+pip install stripe
 
 pip install selenium (TDD)
 pip install webdriver-manager

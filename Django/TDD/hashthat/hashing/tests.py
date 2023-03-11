@@ -31,6 +31,13 @@ import hashlib
         
 class UnitTestCase(TestCase):
     
+    def saveHash(self):
+        hash = Hash()
+        hash.text = 'hello'
+        hash.hash = '2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824'
+        hash.save()
+        return hash
+    
     def test_home_homepage_template(self):
         response = self.client.get('/')
         self.assertTemplateUsed(response, 'hashing/home.html')
@@ -44,13 +51,13 @@ class UnitTestCase(TestCase):
         self.assertEqual('2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824', text_hash.upper())
         
     def test_hash_object(self):
-        hash = Hash()
-        hash.text = 'hello'
-        hash.hash = '2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824'
-        hash.save()
+        hash = self.saveHash()
         pulled_hash = Hash.objects.get(hash='2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824')
         self.assertEqual(hash.text, pulled_hash.text)
-        
-        
+              
+    def test_viewing_hash(self):
+        hash = self.saveHash()
+        response = self.client.get('/hash/2CF24DBA5FB0A30E26E83B2AC5B9E29E1B161E5C1FA7425E73043362938B9824')
+        self.assertContains(response,'hello')
         
         

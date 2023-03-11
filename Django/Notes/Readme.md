@@ -7,6 +7,11 @@ python.exe -m pip install --upgrade pip
 cd C:\work\django_ve
 activate
 
+Impt:
+Any changes to model.py: 
+1. python manage.py makemigrations
+2. python maanage.py migrate
+
 HTML & CSS:
 https://getbootstrap.com
 

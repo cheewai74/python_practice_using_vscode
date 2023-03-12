@@ -63,3 +63,7 @@ django-admin startproject Django_hello_world
  python manage.py test
 
  https://passwordsgenerator.net/sha256-hash-generator/
+
+ html template:
+ VSC:
+ Type ! then click > then ENTER key.

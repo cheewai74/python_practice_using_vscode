@@ -18,6 +18,8 @@ https://getbootstrap.com
 PIP Install:
 pip install Django
 pip install stripe
+pip install pytest
+pip install pytest-django
 
 pip install selenium (TDD)
 pip install webdriver-manager

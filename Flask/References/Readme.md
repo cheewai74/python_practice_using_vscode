@@ -14,7 +14,9 @@ create a file ".flaskenv"
 pip freeze > requirements.txt
 pip install -r requirements.txt
 
-create a file main.py
+Create a ".flaskenv" file.
+Create a file main.py
+Create a config.py
 
 
 flask commands:

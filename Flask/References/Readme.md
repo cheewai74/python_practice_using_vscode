@@ -8,6 +8,7 @@ pip install flask
 pip install flask-wtf
 pip install python-dotenv
 pip install flask-mongoengine
+pip install flask-wtf flask-security
 pip list
 
 create a file ".flaskenv"

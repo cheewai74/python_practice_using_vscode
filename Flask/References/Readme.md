@@ -4,6 +4,7 @@ py -m venv venv
 venv\Scripts\activate
 
 PIP Install:
+pip install wheel
 pip install flask
 pip install flask-wtf
 pip install python-dotenv
@@ -16,6 +17,9 @@ pip install flask-marshmallow
 pip install marshmallow-sqlalchemy
 
 pip install Flask-Login
+pip install Flask-User
+pip install Flask-JWT-Extended
+pip install Flask-Mail
 pip list
 
 create a file ".flaskenv"

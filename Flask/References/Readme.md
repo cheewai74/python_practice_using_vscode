@@ -14,6 +14,8 @@ pip install flask-restplus
 pip install Flask-SQLAlchemy (For SQLLite)
 pip install flask-marshmallow
 pip install marshmallow-sqlalchemy
+
+pip install Flask-Login
 pip list
 
 create a file ".flaskenv"

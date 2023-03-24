@@ -10,6 +10,10 @@ pip install python-dotenv
 pip install flask-mongoengine
 pip install flask-wtf flask-security
 pip install flask-restplus
+
+pip install Flask-SQLAlchemy (For SQLLite)
+pip install flask-marshmallow
+pip install marshmallow-sqlalchemy
 pip list
 
 create a file ".flaskenv"
@@ -24,6 +28,9 @@ Create a routes.py file in Application folder.
 
 
 flask commands:
+flask db_create (Referred to app.py on planetary-api)
+flask db_seed (Referred to app.py on planetary-api)
 flask run
+
 
 mongo --version

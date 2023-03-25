@@ -19,3 +19,11 @@ message StartRequest{
     Location location = 5;
     google.protobuf.Timestamp time = 6;
 }
+
+message StartResponse{
+    string id = 1;
+}
+
+service Rides {
+    rpc Start(StartRequest) returns (StartResponse){}
+}

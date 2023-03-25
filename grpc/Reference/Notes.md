@@ -11,9 +11,15 @@ Pip Install:
 pip install protobuf
 pip install grpcio
 pip install grpcio-tools
+pip install grpcio-reflection
+pip install config
+pip install python-configuration
+
 
 Protoc Commands:
 protoc --version
 protoc --python_out=. rides.proto
+
+python -m grpc_tools.protoc -I. --python_out=. --grpc_python_out=. rides.proto
 
 E.g: python marshelling.py

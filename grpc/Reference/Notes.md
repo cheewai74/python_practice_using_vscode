@@ -1,3 +1,7 @@
+https://www.vinayshetty.dev/protobuf-cheat-sheet/
+https://grpc.github.io/grpc/core/md_doc_statuscodes.html
+
+
 https://protobuf.dev
 https://github.com/protocolbuffers/protobuf/releases/tag/v22.2
 

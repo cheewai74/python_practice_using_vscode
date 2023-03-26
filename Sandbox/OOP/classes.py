@@ -99,7 +99,7 @@ class Car(Vehicle):
 # moto.turn_engine_off()
 # moto.turn_headlight_off()
 
-# car = Motorcycle("Honda","Civic")
+# car = Car("Honda","Civic")
 # print(car)
 # car.turn_engine_on()
 # car.turn_headlight_on()
@@ -111,17 +111,17 @@ class Car(Vehicle):
 # car.turn_engine_off()
 # car.turn_headlight_off()
 
-moto = Motorcycle("Jim","Harley")
-car = Motorcycle("Honda","Civic")
-
-for vehicle in [moto, car]:
-    print(vehicle)
-    vehicle.turn_engine_on()
-    vehicle.turn_headlight_on()
-    vehicle.start_driving()
-    vehicle.turn('left')
-    vehicle.turn('right')
-    print(vehicle)
-    vehicle.stop_driving()
-    vehicle.turn_engine_off()
-    vehicle.turn_headlight_off()
+# moto = Motorcycle("Jim","Harley")
+# car = Car("Honda","Civic")
+# 
+# for vehicle in [moto, car]:
+    # print(vehicle)
+    # vehicle.turn_engine_on()
+    # vehicle.turn_headlight_on()
+    # vehicle.start_driving()
+    # vehicle.turn('left')
+    # vehicle.turn('right')
+    # print(vehicle)
+    # vehicle.stop_driving()
+    # vehicle.turn_engine_off()
+    # vehicle.turn_headlight_off()

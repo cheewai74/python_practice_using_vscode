@@ -1,0 +1,1 @@
+When you call a function in a class instance - it's called a method.

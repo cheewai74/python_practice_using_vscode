@@ -21,4 +21,5 @@ python -m venv C:\work\mysql-sqlalchemy-workspace
 cd C:\work\mysql-sqlalchemy-workspace
 
 pip install mysql-connector-python
+pip install MySQL-python
 pip install SQLAlchemy 

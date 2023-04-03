@@ -1,6 +1,10 @@
 *** Settings ***
 Documentation      This is some basic info about the whole suite
-Library            SeleniumLibrary                
+Library            SeleniumLibrary    
+
+Resource           ../Resources/Common.robot
+Test Setup         Begin Web Test
+Test Teardown      End Web Test            
 
 *** Variables ***
 
@@ -15,7 +19,6 @@ Should be able to add new customer
 
     #open the browser
     log                            Starting the test case
-    open browser                   https://automationplayground.com/crm/        chrome 
 
     #resize browser window for recording
     Set window position            x=341    y=169
@@ -45,8 +48,6 @@ Should be able to add new customer
 
     click button                   Submit
     wait until page contains       Success! New customer added.
-
-    sleep                          5s    
-    close browser      
+ 
 
 *** Keywords ***

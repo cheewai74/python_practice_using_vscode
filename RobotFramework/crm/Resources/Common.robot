@@ -5,7 +5,7 @@ Library        SeleniumLibrary
 Begin Web Test
         #open the browser
         log                            Launching the browser
-        open browser                   https://automationplayground.com/crm/        chrome  
+        open browser                   https://automationplayground.com/crm/    chrome 
 
 End Web Test
 ...     sleep                          5s    

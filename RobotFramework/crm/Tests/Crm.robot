@@ -7,6 +7,8 @@ Test Setup         Begin Web Test
 Test Teardown      End Web Test            
 
 *** Variables ***
+${MY VARIABLE}=    Starting the test case
+@{LIST}=           one    two    three   
 
 *** Test Cases ***
 Should be able to add new customer
@@ -18,8 +20,9 @@ Should be able to add new customer
     Set selenium Timeout           10s
 
     #open the browser
-    log                            Starting the test case
-
+    log                            ${MY VARIABLE}
+    @{alphabets}=    Create List    a    b    c
+    Log    ${alphabets}
     #resize browser window for recording
     Set window position            x=341    y=169
     Set window size                width=1935    height=1090

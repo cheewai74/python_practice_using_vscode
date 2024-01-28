@@ -5,3 +5,5 @@ Create a folder C:\PythonVE
 python -m venv c:\PythonVE
 cd c:\PythonVE\Scripts
 activate
+
+venv/scripts/activate

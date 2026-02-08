@@ -1,0 +1,5 @@
+nltk,
+corpus,
+corpora,
+wordnet,
+wordlist

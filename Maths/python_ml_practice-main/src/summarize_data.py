@@ -1,0 +1,12 @@
+import pandas as pd 
+washers = pd.read_csv("..\dataset\washers.csv")
+# washers.info()
+# print(washers)
+print(washers.head())
+print(washers[['BrandName']].describe())
+print(washers[['Volume']].describe())
+print(washers[['Volume']].value_counts())
+print(washers[['Volume']].value_counts(normalize=True))
+print(washers[['Volume']].mean())
+print(washers.groupby('BrandName')[['Volume']].mean().sort_values(by='Volume'))
+print(washers.groupby('BrandName')[['Volume']].agg(['mean','median','min','max']))

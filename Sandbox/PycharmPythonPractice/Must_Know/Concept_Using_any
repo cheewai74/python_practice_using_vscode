@@ -1,0 +1,21 @@
+any(
+    condition(item)
+    for item in iterable
+    )
+
+Example:
+
+From:
+
+    def contains_digit(input_str):
+        for char in input_str:
+            if char.isdigit():
+                return True
+        return False
+
+To:
+
+    def contains_digit(input_str):
+        return any(char.isdigit()
+            for char in input_str
+

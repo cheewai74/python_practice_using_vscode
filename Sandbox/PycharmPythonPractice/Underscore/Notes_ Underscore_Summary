@@ -1,0 +1,109 @@
+Pattern	    Example	    Meaning
+
+Single
+Leading
+Underscore	_var	Naming convention indicating a name is meant for internal use.
+                    Generally not enforced by the Python interpreter (except in wildcard imports) and
+                    meant as a hint to the programmer only.
+
+Single
+Trailing
+Underscore	var_	Used by convention to avoid naming conflicts with Python keywords.
+
+Double
+Leading
+Underscore	__var	Triggers name mangling when used in a class context.
+                    Enforced by the Python interpreter.
+
+Double
+Leading and
+Trailing
+Underscore	__var__	Indicates special methods defined by the Python language.
+                    Avoid this naming scheme for your own attributes.
+
+Single
+Underscore	_	Sometimes used as a name for temporary or insignificant variables (“don’t care”).
+                Also: The result of the last expression in a Python REPL.
+
+
+
+This is handy if you’re working in an interpreter session
+and you’d like to access the result of a previous calculation.
+Or if you’re constructing objects on the fly and
+want to interact with them without assigning them a name first:
+
+>>> 20 + 3
+23
+>>> _
+23
+>>> print(_)
+23
+
+>>> list()
+[]
+>>> _.append(1)
+>>> _.append(2)
+>>> _.append(3)
+>>> _
+[1, 2, 3]
+
+Perhaps surprisingly, name mangling is not applied if a name starts and ends with double underscores. Variables surrounded by a double underscore prefix and postfix are left unscathed by the Python interpeter:
+
+class PrefixPostfixTest:
+    def __init__(self):
+        self.__bam__ = 42
+
+>>> PrefixPostfixTest().__bam__
+42
+
+For example, in the following loop we don’t need access to the running index and we can use “_” to indicate that it is just a temporary value:
+
+>>> for _ in range(32):
+...     print('Hello, World.')
+
+
+
+Besides its use as a temporary variable, “_” is a special variable in most Python REPLs
+that represents the result of the last expression evaluated by the interpreter.
+
+>>> car = ('red', 'auto', 12, 3812.4)
+>>> color, _, _, mileage = car
+
+>>> color
+'red'
+>>> mileage
+3812.4
+>>> _
+12
+
+Use Single underscore to unpack expression
+E.g:
+
+for _ in range(32):
+    print('Hello World')
+
+Don't care variable to ignore particular values.
+E.g:
+car = ('red', 'auto', 12, 3812.4)
+color, _, _, mileage = car
+
+list()
+_.append(1)
+_.append(2)
+_.append(3)
+_
+
+• Single Leading Underscore “_var”: Naming convention indicating
+a name is meant for internal use. Generally not enforced
+by the Python interpreter (except in wildcard imports)
+and meant as a hint to the programmer only.
+• Single Trailing Underscore “var_”: Used by convention to
+avoid naming conflicts with Python keywords.
+• Double Leading Underscore “__var”: Triggers name mangling
+when used in a class context. Enforced by the Python interpreter.
+• Double Leading and Trailing Underscore “__var__”: Indicates
+special methods defined by the Python language. Avoid
+this naming scheme for your own attributes.
+• Single Underscore “_”: Sometimes used as a name for temporary
+or insignificant variables (“don’t care”). Also, it represents
+the result of the last expression in a Python REPL session.

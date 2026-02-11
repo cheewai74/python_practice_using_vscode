@@ -1,0 +1,10 @@
+*args        : Allows for unlimited variables to be passed into a function without defining them a head of time.
+
+**kwargs     : Allows for unlimited keyword arguments to be passed into a funtion without defining them ahead of time.
+
+__init__     : 1. Constructor
+               2. Set default state of object when it is created.
+               3. First metod for a class.
+
+Self         : 1. Self referencing variable
+               2. Reference the object that is constructed by the init method.

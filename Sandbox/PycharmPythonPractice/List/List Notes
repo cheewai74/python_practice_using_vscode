@@ -1,0 +1,8 @@
+>>> fruits = ['avocados', 'bananas', 'oranges', 'grapes', 'mangos']
+>>> fruits[2:-2]
+['oranges']
+>>> fruits[1:4:2]
+['bananas', 'grapes']
+
+List comprehensions are commonly used to create a list or collection from another list or iterator.
+A set does not allow duplicate elements, but a list does.

@@ -1,0 +1,172 @@
+
+Self provides a convenient way to access and modify an object within a method
+
+#Using id() to determine if object is mutable or immutable
+
+# Using dir() to determine which built-in attributes are present
+print(dir(MyInstance))
+
+using is to determine if both object is the same.
+
+help('__class__')
+
+class method only works with class data, it doesn't know about any data associated with an instance data
+
+# Difference between is and ==
+An is expression evaluates to True if two variables point to the
+same (identical) object.
+An == expression evaluates to True if the objects referred to by
+the variables are equal (have the same contents).
+
+You can think of a Python class as a “data record plus.” It can do everything a
+passive data record can do—store a series of data fields in different formats—
+but potentially much more.
+
+ An instance of a class is called an object. This means that there is a one-to many
+relationship between classes and objects. For each class, you can create
+zero or more objects.
+
+an_obj = ClassName(args)
+another_obj = ClassName(args)
+
+ A function defined within a class is called a method.
+
+ A reference to the object itself is passed as the first argument to such a method.
+By convention, this argument is named self. It should be placed at the beginning
+of each method definition.
+
+def method_name(self, other_args):
+statements
+
+ However, when you call an instance method, you do not include the self
+argument. That is passed automatically.
+object.method_name(args)
+
+Classes generally have at least one method: _ _init_ _, which creates instance
+variables recognized by every object of the class.
+
+def _ _init_ _(self, other_args):
+self.var1 = value
+self.var2 = value
+self.var3 = value
+
+ Other special methods include _ _str_ _, which produces a string representation
+used by the print function. This method must return a string. Still other
+special methods are _ _add_ _, _ _eq_ _, and _ _sub_ _.
+
+ You can also create any number of your own method names. Use of a leading
+underscore or two (_) is encouraged as a way of signaling that the member
+should be regarded as private. However, you should avoid using the combination
+of leading and trailing double underscores, as in _ _init_ _, because that convention
+is used by special method names.
+
+ All references to an instance variable from within the class definition must be
+accessed as self.name.
+
+ Remember to use the dot notation (.) to access instance variables as well as methods.
+
+When one class inherits from another, it automatically gets the methods and
+attributes of that parent object—which it may either maintain or override.
+A class inheriting from another is said to subclass the other class, which in
+turn becomes the superclass or parent class.
+
+The basic syntax for subclassing is
+class class_name(base_class):
+
+The way to call another class’s version of a function is to use the dot (.) notation.
+class_name.method(self, args)
+
+The difference is that static methods take no additional argument
+at all, whereas class methods take an additional argument referring to the
+class itself.
+
+Static methods have the following syntax:
+
+@staticmethod
+def method_name(args):
+statements
+
+The syntax for class methods is similar. The difference is that the extra
+argument (which by convention is cls) provides a convenient way to call other
+methods of the same class, as cls.method.
+
+@classmethod
+def method_name(cls, args):
+    statements
+
+Inheritance is realized through subclassing in Python. The following syntax
+causes new_class to automatically include all the methods and class variables
+of base_class (although the methods may be overridden):
+class new_class(base_class):
+    definitions
+
+ Remember that _ _init_ _ is a true initialization function. This makes some
+aspects of inheritance easier. In particular, the _ _init_ _ function is automatically
+inherited but may be overridden.
+
+ A subclass may call any method in the base class by referring to the base class
+explicitly and using the dot notation (.).
+class Dog(Pet):
+def _ _init_ _(self, name, breed, age, toy):
+self.toy = toy
+Pet._ _init_ _(self, name, breed, age)
+
+ Class variables are defined directly under the class header rather than from within
+a method. Class variables are shared by all members of the class and are always
+referred to with the syntax class_name.var, rather than object_name.var
+or self.var.
+
+Getter Methods
+To write a getter method for a property, place the following definition inside
+a class:
+
+@property # "Getter" method
+def property_name(self):
+    statements
+    return value
+
+class MyClass:
+    def _ _init_ _(self):
+        self._a = self._b = self_c = -1
+
+@property # "Getter" for property a
+def a(self):
+    return self._a
+
+@property # "Getter" for property b
+def b(self):
+    return abs(self._b)
+
+@property # "Getter" for property c
+def c(self):
+    return self._c % 2 == 0
+
+To build your own iterable in Python, write a generator function. Instead of
+returning a value, the generator uses a yield statement.
+yield x
+
+The getter method for a property is called when the user of a class tries to get
+the value of the property. A getter has this syntax:
+
+@property
+def property_name(self):
+    statements
+    return value
+
+ The setter method for a property is called when the user of a class tries to set
+the property’s value. A setter has this syntax:
+
+@property_name.setter
+def(self, new_value):
+    statements
+
+In Python, functions have attributes, just as other objects do. You can use the
+__fname__ attribute to get the name of the function at the time it was defined.
+print(f.__name__)
+
+This sets the new value if one is provided, and then returns the currently set value.
+
+if c: self._color=c
+return self._color
+
+If your variables are encapsulated, this means they belong to the object and not to the class.

@@ -1,0 +1,13 @@
+import os               Import the os module.
+
+help(os)                From within the interactive environment, this prints a list of os
+                        functions and other features.
+
+os.listdir()            List directory. Returns a list, each element of which is a string
+                        containing a file name.
+
+os.chdir(string)        Change directory. The string can contain either a relative or a
+                        full path name.
+
+os.getcwd()             Get Current Working Directory. Returns the full path name of
+                        the current directory, in a string.

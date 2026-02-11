@@ -1,0 +1,14 @@
+# -- Set Up Virtual Environment --
+python -m venv c:\PythonVE\ve_atf39
+
+λ cd PythonVE\ve_atf39\scripts
+
+C:\PythonVE\ve_atf39\Scripts
+λ activate
+
+C:\PythonVE\ve_atf39\Scripts
+(ve_atf39) λ
+
+# Virtual Environment for Python Rest API
+pip install pytest
+pip install freeze

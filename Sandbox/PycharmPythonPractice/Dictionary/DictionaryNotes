@@ -1,0 +1,32 @@
+Dictionaries in Python are data structures that optimize element lookups by associating keys to values.
+Dictionaries are mutable data structures.
+Curly brackets are used to define both dictionaries and sets.
+The in keyword is a tool Python provides to, in this case, check whether a key is present in a dictionary or not.
+
+d={}
+d.update({1:"one", 2:"two"})
+d
+
+rolodex ={'Aaron' : 5551234,
+           'Sam' : 7778888,
+           'Tony' : 2221111}
+
+def caller_id(lookup_number):
+    for name, num in rolodex.items():
+          if num == lookup_number:
+            return name
+
+# dictionary comprehension example
+# The minimal syntax for dictionary comprehension is:
+# dictionary = {key: value for vars in iterable}
+# https://www.programiz.com/python-programming/dictionary-comprehension
+
+square_dict = {num: num*num for num in range(1, 11)}
+print(square_dict)
+
+#item price in dollars
+old_price = {'milk': 1.02, 'coffee': 2.5, 'bread': 2.5}
+
+dollar_to_pound = 0.76
+new_price = {item: value*dollar_to_pound for (item, value) in old_price.items()}
+print(new_price)

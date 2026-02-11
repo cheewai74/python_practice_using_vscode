@@ -1,0 +1,17 @@
+1. Map method will take the function we would like to map as well as iterable
+as positional arguments in that order
+
+a map function, is a function that accepts a function and an array as arguments, and applies the given function
+to each element of the array, returning another array with the result of each transformation
+
+map(function_object, iterable1, iterable2,...)
+
+2. Python provides a built-in map function
+
+• It does not return a list, but a map object, but if you apply list to it, will become a list.
+
+• It does not accept only one array, but n instead,
+  passing n arguments to the provided transformation,
+  applying it to the items of the provided arrays in parallel
+  (returning None as default if an array is shorter than others)
+  like: transformation(array1[0], array2[0], ..., arrayN[

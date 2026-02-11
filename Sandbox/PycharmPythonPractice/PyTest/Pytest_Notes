@@ -1,0 +1,14 @@
+python -m pytest
+
+python -m pytest --help
+python -m pytest --verbose
+python -m pytest --quiet
+python -m pytest --exitfirst
+python -m pytest --maxfail=3
+python -m pytest --junit-xml report.xml
+
+python -m pytest test/test_accum.py
+python -m pytest tests/test_math.py::test_one_plus_one
+
+https://docs.pytest.org/en/stable/
+https://docs.pytest.org/en/stable/assert.html?highlight=writing%20reporting

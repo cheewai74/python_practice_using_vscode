@@ -1,0 +1,13 @@
+
+for each element, one at a time, in the list:
+    do something with that element
+
+while conditions
+    if ... break
+    if ... continue
+else:   # Will only execute when the condition nolonger true and the loops exits normally.
+
+for x in xlist:
+    if x == "" : continue
+    if x ==  "" : break
+else: # Will only execute when the condition nolonger true and the loops exits normally.

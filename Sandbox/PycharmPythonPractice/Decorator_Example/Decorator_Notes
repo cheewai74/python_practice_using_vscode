@@ -1,0 +1,8 @@
+Decorators provide a nice and simple syntax to call higher-order functions.
+
+Decorator takes a function as a parameter, and returns a wrapper of that
+given function to extend its behavior without actually modifying it.
+
+https://dbader.org/blog/python-decorators
+
+For a class to be callable, the dunder call method must be implemented.

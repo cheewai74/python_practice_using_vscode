@@ -1,0 +1,28 @@
+@decorator_name
+def func(args):
+    statements
+
+This translates into
+
+def func(args):
+    statements
+    func = decorator_name(func)
+
+A decorator re-assigns a function name to a “wrapped” version of the original
+function. The wrapped version does everything the function did but does
+additional things as well.
+
+A decorator takes another function as argument (let’s call it f), defines a new
+function around the old one (f), and finally returns the resulting function.
+
+ The following statement causes the new version of the function (the “wrapped”
+function) to replace itself, that is, the original function.
+
+function = decorator(function)
+
+ The @decorator syntax provides a more readable version of the same thing.
+Preceding a function definition with @decorator causes the function name to
+be replaced with the wrapped version of the same function.
+
+@decorator_name
+function_definition

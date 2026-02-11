@@ -1,0 +1,60 @@
+ __new__() method was created mainly to facilitate the creation of subclasses of immutable types
+ (such as int, str, list) and metaclasses.
+
+ __repr__() defines the “official” string representation of the object. Ideally,
+  should output a string that is a valid Python statement and can be used to recreate the object.
+  It is mainly used for debugging
+
+"""
+
+    The __getitem__() and __setitem__() methods are used to implement the built-in functionality
+    of using [index/key] to read and edit elements of a sequence object like a list or
+    a mapping object like dict.
+
+"""
+
+def __getitem__(self, key):
+     if key < 0 or key > 1:
+         raise IndexError("Index out of range! Should either be 0 or 1.")
+     elif key:
+         return self.y
+     else:
+         return self.x
+
+def __setitem__(self, key, val):
+     if key < 0 or key > 1:
+         raise IndexError("Index out of range! Should either be 0 or 1.")
+     elif key:
+         self.y = val
+     else:
+         self.x = val
+
+def __add__(self, other):
+    if type(other) is not Vector:
+        raise TypeError('other should be an object of class Vector')
+    return Vector(self.x + other.x, self.y + other.y)
+
+def __sub__(self, other):
+    if type(other) is not Vector:
+        raise TypeError('other should be an object of class Vector')
+    return Vector(self.x - other.x, self.y - other.y)
+
+def __mul__(self, other):
+    if type(other) is not Vector:
+        raise TypeError('other should be an object of class Vector')
+    return self.x * other.x + self.y * other.y
+
+def __lt__(self, other):
+     if type(other) is not Vector:
+         raise TypeError('other should be an object of class Vector')
+     return self() < other()
+
+def __gt__(self, other):
+     if type(other) is not Vector:
+         raise TypeError('other should be an object of class Vector')
+     return self() > other()
+
+def __eq__(self, other):
+     if type(other) is not Vector:
+         raise TypeError('other should be an object of class Vector')
+     return self.x == other.x and self.y == other.y

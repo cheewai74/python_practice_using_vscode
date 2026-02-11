@@ -1,0 +1,12 @@
+Go to File -> Settings(ctrl + alt + s) -> Project Interpreter ->
+click on "+" -> Search for the Package name (Tkinter) -> Click on "Install Package".
+
+System terminal: python -m tkinter or python3 -m tkinter
+
+
+import TkinterExtensions
+
+>>> import tkinter
+>>> import _tkinter
+>>> tkinter._test()
+>>>

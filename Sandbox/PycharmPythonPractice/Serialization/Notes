@@ -1,0 +1,15 @@
+Serialization: Converting a Python Object to sequence of bytes
+
+Use pickle
+
+def handle(req, resp):
+    data = req.read()   # de-serialize
+    out = fn(data)      # work
+    resp.write(out)     #serialize
+
+#Example
+run moves.py
+
+import pickle
+data = pickle.dumps(move1)
+move1d = pickle.loads(data) # content will be displayed

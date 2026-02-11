@@ -1,0 +1,20 @@
+F-strings provide a way to embed expressions inside string literals.
+It should be noted that an f-string is really an expression evaluated at run time,
+not a constant value.
+
+name = 'Wong'
+title = 'full stack hacker'
+print(f'{name} is a {title}.')
+# Wong is a full stack hacker.
+
+pi = 3.1415926
+print(f'Pi is approximately equal to {pi:.2f}')
+# Pi is approximately equal to 3.14
+
+id = 1  # need to print a 3-digit number
+print(f"The id is {id:03d}")
+# The id is 001
+
+N = 1000000000  # need to add separator
+print(f'His networth is ${N:,d}')
+# His networth is $1,000,000,000

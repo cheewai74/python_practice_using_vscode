@@ -1,0 +1,15 @@
+countries = ['Netherlands', 'Nigeria', 'Jordan', 'Nepal', 'Niger', 'Japan']
+capitals = ['Amsterdam', 'Abuja', 'Amman', 'Kathmandu', 'Nlamey', 'Tokyo']
+
+for country, capital in zip(countries, capitals):
+    print(f'The capital city of {country} is {capital}')
+
+# for unknown values
+countries = ['Netherlands', 'Nigeria', 'Jordan', 'Nepal', 'Niger', 'Japan']
+capitals = ['Amsterdam', 'Abuja', 'Amman', 'Kathmandu']
+
+from itertools import zip_longest
+for country, capital in zip_longest(countries, capitals, fillvalue='unknown'):
+    print(f'The capital city of {country} is {capital}')
+
+pairs = list(zip(countries, capitals))

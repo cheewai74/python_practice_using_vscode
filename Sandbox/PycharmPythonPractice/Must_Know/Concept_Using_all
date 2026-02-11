@@ -1,0 +1,30 @@
+1. all
+
+   all(
+       condition(item)
+       for item in iterable
+       )
+
+   E.g:
+   
+   From:
+   
+   def valid_rgb(rgb):
+       ''' Receives (r,g,b) tuple,
+           Checks if each rgb int is within (0, 255)
+       '''
+       for val in rgb:
+           if not 0 <= val <= 255:
+               return false
+       return True   
+   
+   To:
+
+   def valid_rgb(rgb):
+       ''' Receives (r,g,b) tuple,
+           Checks if each rgb int is within (0, 255)
+       '''
+       return all(
+              0 <= val <= 255
+              for val in rgb
+              )
